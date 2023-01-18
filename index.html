@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,32 +8,158 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>meow-café</title>
     <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+    <link rel="stylesheet" href="assets/css/menu.css">
 </head>
+
 <body>
+    <!-- Menu -->
     <header>
-        <img class="button" src="assets/images/button.png">
+        <div class="menu">
+            <!-- Toogle Menu -->
+            <input type="checkbox" class="menu-checkbox" id="nav-toggle">
+            <label for="nav-toggle" class="menu-button">
+                <span class="menu-icon" aria-label="toggle menu menu"></span>
+            </label>
+            <!-- BackGround Menu -->
+            <div class="menu-background"></div>
+            <!-- Lista de links Menu -->
+            <nav class="menu-nav" role="menu">
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">quem somos</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">adoção</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">loja</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">contato</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div class="introduction-page">
-        <img class="main-logo" src="assets/images/logo.png">
-        <img class="arrow" src="assets/images/arrow.png">
+    <!-- Div para fazer a animação de Snap-Scroll -->
+    <div class="snap-scroll">
+
+        <!-- Sessão de Intro -->
+        <section class="introduction-page">
+            <img class="main-logo" src="assets/images/logo.png">
+            <img class="arrow" src="assets/images/arrow.png">
+        </section>
+
+        <!-- Sessão de Conteudo Principal -->
+        <section class="main">
+            <div class="text-main">
+                <div class="title-main">
+                    <h1>Gato + </h1>
+                    <!-- Cuidado quando usar emote direto no código -->
+                    <!-- É sempre preferivel usar a tag "i" passando um icone dos assets ou de alguma lib -->
+                    <h1>Café = <span class="he4rt-main">❤</span>
+                    </h1>
+                </div>
+                <div class="text-main">
+                    <p>
+                        A Meow Cafe é uma <i>cat cafe</i> com o intuito de resgastar gatinhos e dar a eles um lar
+                        temporário com muito amor e cuidado até encontrarem uma família.
+                    </p>
+                    <p>
+                        É um cantinho perfeito para você relaxar, se encontrar com os amigos e até mesmo para
+                        <i>coworking</i> (temos wi-fi gratuito!).
+                    </p>
+                    <p>
+                        Espaço aconchegante, bebidas deleciosas e o mais importante: <b>cheio de gatinhos!</b><br><br>É
+                        um cantinho perfeito para você relaxar, se encontrar com os amigos e até mesmo para coworking
+                        (temos wi-fi gratuito!). Espaço aconchegante, bebidas deleciosas e o mais importante: cheio de
+                        gatinhos!
+                    </p>
+                </div>
+            </div>
+            <!-- Imagem do gatinho é impossivel de ajustar no responsivo por isso ela some no mobile -->
+            <div class="image-main">
+                <!-- Lembra de sempre colocar alt nas imagens -->
+                <img src="assets/images/cat-photo.png">
+            </div>
+        </section>
+
+        <!-- Sessão de Regras de Convivência-->
+        <section class="rules">
+            <div class="title-rules">
+                <h2>Regras de Convivência</h2>
+                <h3>para que todos tenham uma experiencia meowravilhosa!</h3>
+            </div>
+            <div class="group-content-rules">
+                <div class="content-rules">
+                    <!-- Exemplo de alt descrevendo o intuito da imagem -->
+                    <img src="./assets/images/hand-sanitizer.png" alt="Imagem se referindo a higiene">
+                    <h4>sanetize suas mãos!</h4>
+                    <p>para sua segurança e <br>a de todos</p>
+                </div>
+                <div class="content-rules">
+                    <img src="./assets/images/dont-feed.png" alt="Imagem se referindo a higiene">
+                    <h4>não alimente os gatinhos</h4>
+                    <p>a nossa comida<br> faz mal a eles!</p>
+                </div>
+            </div>
+            <div class="group-content-rules">
+                <div class="content-rules">
+                    <img src="./assets/images/cat-sleep.png" alt="Imagem se referindo a higiene">
+                    <h4>não pertube o soninho deles</h4>
+                    <p>gatos dormem por volta<br> de 15h/dia, respeite a<br> soneca dos peludinhos</p>
+                </div>
+                <div class="content-rules">
+                    <img src="./assets/images/dont-touch.png" alt="Imagem se referindo a higiene">
+                    <h4>não agarre e nem force eles a nada</h4>
+                    <p>cada gatinho tem sua<br> personalidade, então seja<br> gentil com todos</p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer">
+                <div class="logo-footer">
+                    <img src="./assets/images/logo.png" alt="logo com um gato dentro de uma xicará de café">
+                </div>
+                <div class="institucional-footer">
+                    <h3>Institucional</h3>
+                    <ul>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Trocas e Devoluções</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="contato-footer">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li>
+                            <img src="./assets/images/email.png" alt="Icone de email" />meowcafe@gmail.com
+                        </li>
+                        <li>
+                            <img src="./assets/images/gps.png" alt="Icone de local" /> xxxxx xxxx, xx<br>
+                            São Paulo, SP
+                        </li>
+                    </ul>
+                </div>
+                <div class="social-footer">
+                    <h3>Redes Sociais</h3>
+                    <a href="#">
+                        <img src="./assets/images/instagram-logo.png" alt="logo do instagram">
+                    </a>
+                    <a href="#">
+                        <img src="./assets/images/twitter-logo.png" alt="logo do twitter">
+                    </a>
+                    <a href="#">
+                        <img src="./assets/images/facebook-logo.png" alt="logo do facebook">
+                    </a>
+                </div>
+            </div>
+            <div class="noCopyRights-footer">
+                © 2022 by MeowCafe
+            </div>
+        </footer>
     </div>
-    <section class="main-content">
-        <div class="text">
-            <div class="title-main-content">
-                <h1>Gato + </h1>
-                <h1>Café = ❤</h1>
-            </div>
-            <div class="text-main-content">
-                <p>A Meow Cafe é uma <i>cat cafe</i> com o intuito de resgastar gatinhos e dar a eles um lar temporário com muito amor e cuidado até encontrarem uma família.</p>
-                <p>É um cantinho perfeito para você relaxar, se encontrar com os amigos e até mesmo para <i>coworking</i> (temos wi-fi gratuito!).</p> 
-                <p>Espaço aconchegante, bebidas deleciosas e o mais importante: <b>cheio de gatinhos!</b></p>
-            </div>
-        </div>
-        
-        <div class="image-main-content">
-            <img src="assets/images/cat-photo.png">
-        </div>
-    </section>
 </body>
+
 </html>
