@@ -1,68 +1,341 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-body{
-    background-color: #FFE2E5;
+body {
+  background-color: #ffe2e5;
 }
 
-header{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+header {
+  display: flex;
+  justify: flex-end;
+  align-items: center;
+  scroll-behavior: smooth;
 }
 
-h1{
-    font-family: 'Baloo Bhai 2', sans-serif;
-    font-size: 120px;
-    color: #FF949B;
-    text-transform: uppercase;
-    margin: 0;
-    line-height: 100%;
+/* Sessão de Intro */
+.introduction-page {
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  scroll-snap-type: y mandatory;
+  scroll-snap-align: center;
 }
 
-.button{
-    width: 140px;
+.main-logo {
+  width: 700px;
+  padding-bottom: 45px;
 }
 
-.introduction-page{
-    padding-top: 30px;
+.arrow {
+  opacity: 40%;
+}
+
+/* Essa é a Classe que faz a animação de Scroll */
+/* Envolva todas as divs que vão participar da animação */
+.snap-scroll {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory; /* Essa é a propriedade que faz o scroll */
+}
+
+/* Sessão de Conteudo Principal */
+.main {
+  font-family: "Noto Sans", sans-serif;
+  color: #5a4e4a;
+  font-size: 26px;
+  margin-top: 220px;
+  margin-left: 300px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+
+  /* Essa propriedade obriga o scroll a centralizar no meio da div com a classe */
+  /* 1 scroll centraliza a tela no meio da div com a classe .main */
+  scroll-snap-align: center;
+}
+
+.text-main {
+  padding: 50px 0;
+  width: 85%;
+}
+
+.title-main h1 {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-size: 120px;
+  color: #ff949b;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 100%;
+}
+
+.image-main img {
+  display: flex;
+  align-items: flex-end;
+  height: 100vh;
+  width: auto;
+}
+
+/* ❤--- Animação do coração batendo ---❤*/
+.title-main h1 .he4rt-main {
+  animation: beat 1.5s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+/* Sessão de Regras DE Convivencia */
+.rules {
+  font-family: "Noto Sans", sans-serif;
+  color: #fff;
+  font-size: 26px;
+  background-color: #ff949b;
+  text-align: center;
+  scroll-snap-align: center;
+  padding-bottom: 100px;
+}
+
+.title-rules {
+  display: block;
+  width: 100%;
+  /* Lembrando */
+  /* Ordem: TOP RIGHT BOTTOM LEFT (Sentido horário) */
+  padding: 100px 0px 0px 0px;
+}
+
+.title-rules h2 {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-size: 70px;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 100%;
+}
+
+.title-rules h3 {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.group-content-rules {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.content-rules {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  width: 400px;
+}
+
+.content-rules h4 {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 40px;
+  color: #393635;
+}
+
+.content-rules p {
+  font-size: 24px;
+  white-space: pre-wrap;
+}
+
+.content-rules img {
+  height: 120px;
+  padding: 10px;
+}
+
+/* Footer */
+
+footer {
+  background-color: #211f1d;
+  color: #fff;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  padding: 50px 0;
+  scroll-snap-align: start;
+  justify-content: space-around;
+  font-size: 28px;
+}
+
+.logo-footer img {
+  width: auto;
+  height: 280px;
+  margin: 35px;
+}
+
+.footer h3 {
+  color: #ffe2e5;
+  /* Sempre prefira tranformar no css para uppercase do que no html */
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #fff;
+  transition: 1s;
+}
+
+.footer a:hover {
+  color: #ff949b;
+  transition: 1s;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer li {
+  padding: 5px 0;
+}
+
+.institucional-footer {
+  margin: 35px;
+}
+
+.contato-footer {
+  margin: 35px;
+}
+
+.contato-footer img {
+  margin-right: 10px;
+  width: 25px;
+}
+
+.social-footer {
+  margin: 40px;
+}
+
+.social-footer img {
+  width: auto;
+  height: 60px;
+  margin: 10px;
+  transition: 1s;
+}
+
+.social-footer img:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+.noCopyRights-footer {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 400;
+  padding: 20px 0;
+}
+
+/* ❤--- Responsivo ---❤*/
+
+@media (max-width: 1440px) {
+  .main-logo {
+    width: 600px;
+  }
+  .text-main {
+    width: 100%;
+  }
+  .main {
+    padding-left: 20px;
+  }
+  .image-main img {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .image-main img {
+    display: none;
+  }
+}
+
+/* ❤--- Responsivo Mobile ---❤*/
+
+@media (max-width: 786px) {
+  .snap-scroll {
+    scroll-snap-type: none;
+  }
+  .title-main h1 {
+    font-size: 80px;
+  }
+  .main-logo {
+    width: 400px;
+  }
+  .text-main {
+    width: 100%;
+  }
+  .text-main p {
+    font-size: 20px;
+  }
+  .main {
+    margin-left: 0px;
+  }
+  .image-main img {
+    display: none;
+  }
+  .title-rules h2 {
+    font-size: 50px;
+  }
+  .title-rules h3 {
+    font-size: 26px;
+  }
+  .group-content-rules {
+    flex-direction: column;
+  }
+  .content-rules {
+    width: 100%;
+    padding: 20px;
+  }
+  .footer {
+    flex-direction: column;
+    font-size: 22px;
+  }
+  .footer h3 {
+    font-size: 32px;
+  }
+  .logo-footer {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.main-logo{
-    width: 700px;
-    padding-bottom: 45px;
-}
-
-.arrow{
-    opacity: 40%;
-}
-
-.text{
-    padding-top: 50px;
-}
-
-.main-content{
-    font-family: 'Noto Sans', sans-serif;
-    color: #5A4E4A;
-    font-size: 26px;
-    padding-left: 100px;
-    padding-top: 200px;
-    display: flex;
-    flex-direction:row;
-}
-
-.image-main-content{
-    display: flex;
-    align-items: flex-end;
+  }
+  .logo-footer img {
+    width: auto;
+    height: 200px;
+    margin: 20px auto;
+  }
+  .social-footer img {
+    width: auto;
+    height: 40px;
+    margin: 10px;
+  }
 }
